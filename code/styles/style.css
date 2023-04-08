@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*,::after,::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root
+{
+    --background: hsl(207, 26%, 17%);
+    --color: hsl(0, 0%, 100%);
+    --element: hsl(209, 23%, 22%)
+}
+.light-mode
+{
+    --background: hsl(0, 0%, 98%);
+    --color: (200, 15%, 8%);
+    --element: hsl(0, 0%, 100%);
+}
+
+body
+{
+    font-family: 'Nunito Sans', 'Fraunces',serif;
+    color: var(--color);
+    background-color: var(--background);
+    font-size: 14px;
+}
+.loader
+{
+position: fixed;
+height: 100%;
+width: 100%;
+background-color: var(--background);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.load
+{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex
+{
+    display: flex;
+}
+nav
+{
+    width: 100%;
+    height: 8vh;
+    background-color: var(--element);
+    justify-content:space-between;
+    align-items: center;
+    padding: 0.5em 5em;
+}
+
+nav p
+{
+    gap: 10px;
+}
+
+.content
+{
+    padding: 1em 5em;
+}
+
+
+.search-container
+{
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    margin: 2em 0
+}
+
+.search, .filter
+{
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5em;
+    background-color: var(--element);
+    width: 25vw;
+    height: 3em;
+}
+.input-box , .drop-down
+{
+    width: 100%;
+    height: 100%;
+    color: var(--color);
+    background-color: var(--element);
+    font-weight: 100;
+    border: 0;
+}
+
+.mode
+{
+    justify-content: center;
+    align-items: center;
+}
+.mode:hover
+{
+    cursor:pointer;
+}
+a
+{
+    all: unset;
+}
+
+.countries p
+{
+    margin: 0 5px;
+}
+
+@media screen and ( max-width :1000px) {
+    .load
+    {
+        justify-content: center;
+        width: 80%;
+        height: 40%;
+        
+    }
+    nav
+    {
+        padding: 0.5em 2em;
+    }
+   .search-container
+   {
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   .search
+   {
+    width: 100%;
+   }
+   .filter
+   {
+    width: 40%;
+    align-self: flex-end;
+   }
+   .content
+   {
+    padding: 1em 1em;
+   }
+   .cards
+   {
+    justify-content: center;
+   }
+   .card
+   {
+    min-width: 40vw;
+    /* max-width: 30vw; */
+   }
+   
+
+
+}
+
+@media screen and ( max-width :700px) {
+
+    .content
+    {
+    padding: 1em 1em;
+    }
+    .card
+    {
+     min-width: 65vw;
+    }
+    
+}
+
+@media screen and ( max-width :600px) {
+
+    .content
+    {
+    padding: 1em 1em;
+    }
+    .card
+    {
+     min-width: 65vw;
+     height: 100%;
+    }
+    
+}
+@media screen and ( max-height :600px) {
+
+    .content
+    {
+    padding: 1em 1em;
+    }
+    .card
+    {
+     min-width: 65vw;
+     height: 100%;
+    }
+    
+}
